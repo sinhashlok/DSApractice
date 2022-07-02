@@ -1,18 +1,14 @@
-package DSApractice.LeetCode.Arrays;
+// https://leetcode.com/problems/add-to-array-form-of-integer/
+
+package DSApractice.LeetCode.Arrays.Easy;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class AddtoArrayFormofInteger {
-    public static void main(String[] args) {
-        int[] arr = {1,2,0,0};
-        int k = 34;
+public class Add_to_Array_Form_of_Integer_989 {
 
-        System.out.println(adding(arr, k).toString());
-    }
-
-    static List<Integer> adding(int[] num, int k) {
+    public List<Integer> addToArrayForm(int[] num, int k) {
         int ans = 0;
 
         for (int i = 0; i < num.length; i++)
