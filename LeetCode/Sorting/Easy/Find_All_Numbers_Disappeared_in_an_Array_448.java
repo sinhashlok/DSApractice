@@ -1,0 +1,26 @@
+// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/submissions/
+
+package DSApractice.LeetCode.Sorting.Easy;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Find_All_Numbers_Disappeared_in_an_Array_448 {
+
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        int[] res = new int[nums.length + 1];
+
+        for (int num : nums) {  // mark index which are present
+            res[num] = num;
+        }
+
+        List<Integer> result = new ArrayList<>(res.length);
+        for (int i = 1; i < res.length; i++) {
+            if (res[i] == 0) {
+                result.add(i);
+            }
+        }
+
+        return result;
+    }
+}

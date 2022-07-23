@@ -1,13 +1,10 @@
-package DSApractice.LeetCode.Sorting;
+// https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/
 
-public class SpecialArrayXElementsGreaterThanEqualX_1608 {
-    public static void main(String[] args) {
-        int[] arr = {0,4,3,0,4};
+package DSApractice.LeetCode.Sorting.Easy;
 
-        System.out.println(specialArray(arr));
-    }
+public class Special_Array_With_X_Elements_Greater_Than_or_Equal_X_1608 {
 
-    static int specialArray(int[] nums) {
+    public int specialArray(int[] nums) {
         int x = nums.length;
         int[] counts = new int[x+1];
 
