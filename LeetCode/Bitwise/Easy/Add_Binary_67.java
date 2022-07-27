@@ -24,7 +24,9 @@ public class Add_Binary_67 {
                 sum += b.charAt(j--) - '0';
             }
             // taking carry;
-            carry = sum > 1 ? 1 : 0; // getting carry depend on the quotient we get by dividing sum / 2 that will be our carry. Carry could be either 1 or 0
+            carry = sum > 1 ? 1 : 0;
+            // getting carry depend on the quotient we get by dividing
+            // sum / 2 that will be our carry. Carry could be either 1 or 0
             // if sum is 0 res is 1 & then carry would be 0;
             // if sum is 1 res is 1 & carry would be 0
             // if sum is 2 res is 0 & carry would be 1
