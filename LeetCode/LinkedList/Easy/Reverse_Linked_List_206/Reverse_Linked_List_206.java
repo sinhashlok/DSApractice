@@ -12,7 +12,7 @@ public class Reverse_Linked_List_206 {
         ListNode one = new ListNode(2, two);
         ListNode head = new ListNode(1, one);
 
-        head = reverseList(head);
+        head = reverseListIter(head);
 
         while (head != null) {
             System.out.print(head.val + " -> ");
@@ -21,7 +21,30 @@ public class Reverse_Linked_List_206 {
         System.out.println("END");
     }
 
-    static ListNode reverseList(ListNode head) {
+    // Iterative approach
+    static ListNode reverseListIter(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode prev = null;
+        ListNode next = head.next;
+
+        while (next != null) {
+            head.next = prev;
+            prev = head;
+            head = next;
+            next = next.next;
+        }
+
+        head.next = prev;
+
+        return head;
+    }
+
+
+    // Recusrive approach
+    static ListNode reverseListRev(ListNode head) {
         int size = 0;
         ListNode node = head;
         while (node != null) {
@@ -49,7 +72,6 @@ public class Reverse_Linked_List_206 {
 
         return head;
     }
-
     static ListNode reverseRec(ListNode curr, ListNode prev, ListNode newHead, ListNode head) {
         if (curr.next == null) {
             curr.next = prev;
