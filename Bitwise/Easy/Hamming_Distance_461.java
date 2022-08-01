@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/hamming-distance/
 
-package DSApractice.LeetCode.Bitwise.Easy;
+package DSApractice.Bitwise.Easy;
 
 public class Hamming_Distance_461 {
 

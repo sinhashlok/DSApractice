@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/binary-watch/
 
-package DSApractice.LeetCode.Bitwise.Easy;
+package DSApractice.Bitwise.Easy;
 
 import java.util.ArrayList;
 import java.util.List;
