@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/sum-of-all-subset-xor-totals/
 
-package DSApractice.LeetCode.Bitwise.Easy;
+package DSApractice.Bitwise.Easy;
 
 public class Sum_of_All_Subset_XOR_Totals_1863 {
     public static void main(String[] args) {
