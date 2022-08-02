@@ -1,4 +1,4 @@
-package DSApractice.LeetCode.LinkedList.Easy.Palindrome_Linked_List_234;
+package DSApractice.LinkedList.Easy.Palindrome_Linked_List_234;
 
 public class ListNode {
     int val;

@@ -1,4 +1,4 @@
-package DSApractice.LeetCode.LinkedList.Medium.Reverse_Linked_List_II_92;
+package DSApractice.LinkedList.Medium.Reverse_Linked_List_II_92;
 
 public class ListNode {
     int val;

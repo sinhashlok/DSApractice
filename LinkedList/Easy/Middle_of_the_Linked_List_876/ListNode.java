@@ -1,4 +1,4 @@
-package DSApractice.LeetCode.LinkedList.Easy.Middle_of_the_Linked_List_876;
+package DSApractice.LinkedList.Easy.Middle_of_the_Linked_List_876;
 
 public class ListNode {
     int val;

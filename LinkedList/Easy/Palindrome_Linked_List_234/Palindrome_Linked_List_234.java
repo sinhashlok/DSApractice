@@ -1,34 +1,35 @@
 // https://leetcode.com/problems/palindrome-linked-list/
 
-package DSApractice.LeetCode.LinkedList.Easy.Palindrome_Linked_List_234;
+package DSApractice.LinkedList.Easy.Palindrome_Linked_List_234;
 
 public class Palindrome_Linked_List_234 {
 
     public boolean isPalindrome(ListNode head) {
-        if (head.next == null) {
-            return true;
-        }
+        ListNode mid = middleNode(head);
+        ListNode headSecond = reverse(mid);
+        ListNode reverseHead = headSecond;
 
-        ListNode fast = head, slow = head;
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
-        }
-        if (fast != null) { // if odd number of nodes
-            slow = slow.next;
-        }
-        slow = reverse(slow);
-        fast = head;
-
-        while (slow != null) {
-            if (fast.val != slow.val) {
-                return false;
+        // compare both the halves
+        while (head != null && headSecond != null) {
+            if (head.val != headSecond.val) {
+                break;
             }
-            fast = fast.next;
+
+            head = head.next;
+            headSecond = headSecond.next;
+        }
+        reverse(reverseHead);
+
+        return head == null || headSecond == null;
+    }
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
             slow = slow.next;
+            fast = fast.next.next;
         }
 
-        return true;
+        return slow;
     }
 
     public ListNode reverse(ListNode head) {

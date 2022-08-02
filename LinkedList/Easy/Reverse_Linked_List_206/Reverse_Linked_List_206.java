@@ -1,8 +1,6 @@
 // https://leetcode.com/problems/reverse-linked-list/
 
-package DSApractice.LeetCode.LinkedList.Easy.Reverse_Linked_List_206;
-
-import java.util.List;
+package DSApractice.LinkedList.Easy.Reverse_Linked_List_206;
 
 public class Reverse_Linked_List_206 {
     public static void main(String[] args) {
@@ -34,7 +32,9 @@ public class Reverse_Linked_List_206 {
             head.next = prev;
             prev = head;
             head = next;
-            next = next.next;
+            if (next != null) {
+                next = next.next;
+            }
         }
 
         head.next = prev;
