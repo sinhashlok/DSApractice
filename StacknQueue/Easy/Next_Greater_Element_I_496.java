@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/next-greater-element-i/
 
-package DSApractice.LeetCode.Stack.Easy;
+package DSApractice.StacknQueue.Easy;
 
 import java.util.HashMap;
 import java.util.Map;

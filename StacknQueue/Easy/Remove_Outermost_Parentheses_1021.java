@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/remove-outermost-parentheses/
 
-package DSApractice.LeetCode.Stack.Easy;
+package DSApractice.StacknQueue.Easy;
 
 public class Remove_Outermost_Parentheses_1021 {
 

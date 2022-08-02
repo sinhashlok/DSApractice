@@ -1,4 +1,4 @@
-package DSApractice.LeetCode.Stack.Easy;
+package DSApractice.StacknQueue.Easy;
 
 import java.util.Stack;
 
