@@ -1,36 +1,67 @@
 // https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/
 
-package DSApractice.LeetCode.Searching.Medium;
+package DSApractice.Searching.Medium;
 
 public class Search_in_Rotated_Sorted_Array_33 {
 
     public int search(int[] nums, int target) {
-        int low = 0, high = nums.length - 1;
+        int pivot = findPivot(nums);
 
-        while(low <= high)
-        {
-            int mid = low + (high - low) / 2;
-
-            if(nums[mid] == target) return mid;
-
-            if(nums[low] <= nums[mid]) {
-                if(target >= nums[low] && target <= nums[mid]) {
-                    high = mid - 1;
-                }
-                else {
-                    low = mid + 1;
-                }
-            }
-            else {
-                if(target >= nums[mid] && target <= nums[high]) {
-                    low = mid + 1;
-                }
-                else {
-                    high = mid - 1;
-                }
-            }
+        if (pivot == -1) {
+            return binarySearch(nums, target, 0 , nums.length - 1);
         }
 
+        if (nums[pivot] == target) {
+            return pivot;
+        }
+
+        if (target >= nums[0]) {
+            return binarySearch(nums, target, 0, pivot - 1);
+        }
+
+        return binarySearch(nums, target, pivot + 1, nums.length - 1);
+    }
+
+    public int binarySearch(int[] arr, int target, int start, int end) {
+        while(start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (target < arr[mid]) {
+                end = mid - 1;
+            }
+            else if (target > arr[mid]) {
+                start = mid + 1;
+            }
+            else {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
+    public int findPivot(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            // 4 cases over here
+            if (mid < end && arr[mid] > arr[mid + 1]) {
+                return mid;
+            }
+
+            if (mid > start && arr[mid] < arr[mid - 1]) {
+                return mid-1;
+            }
+
+            if (arr[mid] <= arr[start]) {
+                end = mid - 1;
+            }
+            else {
+                start = mid + 1;
+            }
+        }
         return -1;
     }
 }
