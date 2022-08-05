@@ -1,4 +1,4 @@
-package DSApractice.LeetCode.Searching.Easy;
+package DSApractice.Searching.Easy;
 
 public class Peak_Index_in_a_Mountain_Array_852 {
 
