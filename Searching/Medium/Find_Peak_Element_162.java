@@ -7,17 +7,19 @@ public class Find_Peak_Element_162 {
         int n = nums.length;
         int l = 0, h = n - 1, m;
 
-        while (l <= h)
-        {
+        while (l <= h) {
             m = l + (h - l) / 2;
 
-            if ( (m == 0 || nums[m - 1] <= nums[m]) && (m == n - 1 || nums[m + 1] <= nums[m]) )
+            if ( (m == 0 || nums[m - 1] <= nums[m]) && (m == n - 1 || nums[m + 1] <= nums[m]) ) {
                 return m;
+            }
 
-            if (m > 0 && nums[m - 1] >= nums[m])
+            if (m > 0 && nums[m - 1] >= nums[m]) {
                 h = m - 1;
-            else
+            }
+            else {
                 l = m + 1;
+            }
         }
 
         return -1;
