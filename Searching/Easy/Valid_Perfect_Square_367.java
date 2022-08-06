@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/valid-perfect-square/
 
-package DSApractice.LeetCode.Searching.Easy;
+package DSApractice.Searching.Easy;
 
 public class Valid_Perfect_Square_367 {
 
