@@ -1,4 +1,4 @@
-package DSApractice.LinkedList.Easy;
+package DSApractice.LinkedList.Medium.Reorder_List_143;
 
 public class ListNode {
     int val;
