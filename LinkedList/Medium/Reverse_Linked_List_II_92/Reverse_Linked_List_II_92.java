@@ -1,8 +1,22 @@
 package DSApractice.LinkedList.Medium.Reverse_Linked_List_II_92;
 
 public class Reverse_Linked_List_II_92 {
+    public static void main(String[] args) {
+        ListNode four = new ListNode(5);
+        ListNode three = new ListNode(4, four);
+        ListNode two = new ListNode(3, three);
+        ListNode one = new ListNode(2, two);
+        ListNode head = new ListNode(1, one);
 
-    public ListNode reverseBetween(ListNode head, int left, int right) {
+        head = reverseBetween(head, 2, 4);
+
+        while (head != null) {
+            System.out.print(head.val + " ");
+            head = head.next;
+        }
+    }
+
+    static ListNode reverseBetween(ListNode head, int left, int right) {
         if (head.next == null || left == right) {
             return head;
         }
