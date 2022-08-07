@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/linked-list-cycle-ii/
 
-package DSApractice.LeetCode.LinkedList.Medium.Linked_List_Cycle_II_142;
+package DSApractice.LinkedList.Medium;
 
 public class Linked_List_Cycle_II_142 {
     public static void main(String[] args) {

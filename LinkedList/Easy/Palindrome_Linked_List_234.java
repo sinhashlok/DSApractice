@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/palindrome-linked-list/
 
-package DSApractice.LinkedList.Easy.Palindrome_Linked_List_234;
+package DSApractice.LinkedList.Easy;
 
 public class Palindrome_Linked_List_234 {
 

@@ -1,4 +1,4 @@
-package DSApractice.LinkedList.Medium.Reorder_List_143;
+package DSApractice.LinkedList.Medium;
 
 public class Reorder_List_143 {
 

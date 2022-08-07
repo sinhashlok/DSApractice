@@ -1,4 +1,4 @@
-package DSApractice.LinkedList.Medium.Reverse_Linked_List_II_92;
+package DSApractice.LinkedList.Medium;
 
 public class Reverse_Linked_List_II_92 {
     public static void main(String[] args) {

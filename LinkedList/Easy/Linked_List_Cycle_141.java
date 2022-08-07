@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/linked-list-cycle/
 
-package DSApractice.LeetCode.LinkedList.Easy.Linked_List_Cycle_141;
+package DSApractice.LinkedList.Easy;
 
 public class Linked_List_Cycle_141 {
 

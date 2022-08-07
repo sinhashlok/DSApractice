@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/middle-of-the-linked-list/
 
-package DSApractice.LinkedList.Easy.Middle_of_the_Linked_List_876;
+package DSApractice.LinkedList.Easy;
 
 public class Middle_of_the_Linked_List_876 {
 

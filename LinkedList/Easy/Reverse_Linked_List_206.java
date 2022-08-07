@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/reverse-linked-list/
 
-package DSApractice.LinkedList.Easy.Reverse_Linked_List_206;
+package DSApractice.LinkedList.Easy;
 
 public class Reverse_Linked_List_206 {
     public static void main(String[] args) {

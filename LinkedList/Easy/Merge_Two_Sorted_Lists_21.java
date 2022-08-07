@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
-package DSApractice.LeetCode.LinkedList.Easy.Merge_Two_Sorted_Lists_21;
+package DSApractice.LinkedList.Easy;
 
 public class Merge_Two_Sorted_Lists_21 {
 

@@ -1,4 +1,4 @@
-package DSApractice.LinkedList.Medium.Reverse_Nodes_in_K_Group_25;
+package DSApractice.LinkedList.Medium;
 
 public class Reverse_Nodes_in_K_Group_25 {
 

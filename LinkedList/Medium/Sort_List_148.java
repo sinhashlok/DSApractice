@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/sort-list/
 
-package DSApractice.LeetCode.LinkedList.Easy.Sort_List_148;
+package DSApractice.LinkedList.Medium;
 
 public class Sort_List_148 {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Sort_List_148 {
     }
 
 
-        // merge sort - Top down merge Sort (RECUSIVE)
+        // merge sort - Top down merge Sort (RECURSIVE)
     static ListNode sortListTopMerge(ListNode head) {
         if (head == null || head.next == null) {
             return head;

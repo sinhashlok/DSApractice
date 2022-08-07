@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 
-package DSApractice.LeetCode.LinkedList.Easy.Convert_Binary_Number_in_a_Linked_List_to_Integer_1290;
+package DSApractice.LinkedList.Easy;
 
 public class Convert_Number_in_a_Linked_List_to_Integer_1290 {
     public int getDecimalValue(ListNode head) {
