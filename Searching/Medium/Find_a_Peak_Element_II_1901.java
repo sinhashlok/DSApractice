@@ -30,12 +30,14 @@ public class Find_a_Peak_Element_II_1901 {
             mid = l + (r - l) / 2;
 
             int max_row = 0;
+            // we find the largest element in the middle column
             for (int i = 0; i < mat.length; i++) {
                 if (mat[max_row][mid] < mat[i][mid]) {
                     max_row = i;
                 }
             }
 
+            // we compare the largest with the just prev and next element of that row
             if ((mid == 0 || mat[max_row][mid] > mat[max_row][mid - 1]) &&
                     (mid == mat[0].length - 1 || mat[max_row][mid] > mat[max_row][mid + 1])) {
                 return new int[] {max_row, mid};

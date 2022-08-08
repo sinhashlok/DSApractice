@@ -1,4 +1,4 @@
-package DSApractice.LeetCode.Searching.Medium;
+package DSApractice.Searching.Medium;
 
 public class Find_Peak_Element_162 {
 
