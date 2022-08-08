@@ -16,6 +16,32 @@ public class Linked_List_Cycle_II_142 {
         System.out.print(node.val);
     }
 
+    // Floyd's Tortoise and Hare (Cycle Detection) - Linked List II
+    /*
+     * Each new element in the sequence is an element in nums at the index of the previous element.
+     * If one starts from x = nums[0], such a sequence will produce a linked list with a cycle.
+     *
+     *
+     * Algo:
+     * In phase 1, hare = nums[nums[hare]] is twice as fast as tortoise = nums[tortoise].
+     * Since the hare goes fast, it would be the first to enter the cycle and run around the cycle. At some point,
+     * the tortoise enters the cycle as well, and since it's moving slower the hare catches up to the
+     * tortoise at some intersection point.
+     * Now phase 1 is over, and the tortoise has lost.
+     * ### Note that the intersection point is not the cycle entrance in the general case.
+     *
+     * To compute the intersection point, let's note that the hare has traversed twice as many nodes as the tortoise, i.e.
+     * ### 2d(tortoise) = d(hare)
+     *
+     * In phase 2, we give the tortoise a second chance by slowing down the hare, so that it now moves at the
+     * speed of tortoise: tortoise = nums[tortoise], hare = nums[hare].
+     * The tortoise is back at the starting position, and the hare starts from the intersection point.
+     *
+     * Let's show that this time they meet at the cycle entrance after F steps.
+     *   The tortoise started at zero, so its position after F steps is F.
+     *   The hare started at the intersection point F+a=nC, so its position after F steps is nC+F, that is the same point as F.
+     *   So the tortoise and the (slowed down) hare will meet at the entrance of the cycle.
+     */
     static ListNode detectCycle(ListNode head) {
         int length = 0;
 
