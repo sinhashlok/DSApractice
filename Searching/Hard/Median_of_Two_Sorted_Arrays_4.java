@@ -2,7 +2,6 @@ package DSApractice.Searching.Hard;
 
 public class Median_of_Two_Sorted_Arrays_4 {
 
-
     /* We need time complexity to be: O(log(n + m))
     *
     * We need to find the median such that answer would be same if both arrays were merged in sorted order
