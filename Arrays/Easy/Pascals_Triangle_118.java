@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/pascals-triangle/
 
-package DSApractice.LeetCode.Arrays.Easy;
+package DSApractice.Arrays.Easy;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -19,11 +19,13 @@ public class Pascals_Triangle_118 {
         }
     }
 
-    static List<List<Integer>> generate(int n) {
+    static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> arr = new ArrayList<>();
         int m = 1;
-        while (m <= n) {
+
+        while (m <= numRows) {
             List<Integer> res = new ArrayList<>();
+
             for (int i = 0; i < m; i++) {
                 if (i == 0 || i == m - 1) {
                     res.add(1);
@@ -31,6 +33,7 @@ public class Pascals_Triangle_118 {
                     res.add(arr.get(arr.size() - 1).get(i - 1) + arr.get(arr.size() - 1).get(i));
                 }
             }
+
             arr.add(res);
             m += 1;
         }
