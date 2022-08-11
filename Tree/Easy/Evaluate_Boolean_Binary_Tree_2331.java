@@ -1,4 +1,6 @@
-package DSApractice.Tree.Easy.Evaluate_Boolean_Binary_Tree_2331;
+package DSApractice.Tree.Easy;
+
+import DSApractice.Tree.Easy.TreeNode;
 
 public class Evaluate_Boolean_Binary_Tree_2331 {
 

@@ -1,4 +1,4 @@
-package DSApractice.Tree.Easy.Evaluate_Boolean_Binary_Tree_2331;
+package DSApractice.Tree.Easy;
 
 public class TreeNode {
     int val;
