@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/spiral-matrix/
 
-package DSApractice.LeetCode.Arrays.Medium;
+package DSApractice.Arrays.Medium;
 
 import java.util.ArrayList;
 import java.util.List;

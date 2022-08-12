@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/spiral-matrix-ii/
 
-package DSApractice.LeetCode.Arrays.Medium;
+package DSApractice.Arrays.Medium;
 
 public class Spiral_Matrix_II_59 {
 

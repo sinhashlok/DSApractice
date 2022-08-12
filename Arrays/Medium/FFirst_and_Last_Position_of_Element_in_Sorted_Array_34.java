@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
-package DSApractice.LeetCode.Arrays.Medium;
+package DSApractice.Arrays.Medium;
 
 public class FFirst_and_Last_Position_of_Element_in_Sorted_Array_34 {
 

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/subsets/
 
-package DSApractice.Recursion.Medium;
+package DSApractice.Bitwise.Medium;
 
 import java.util.ArrayList;
 import java.util.List;
