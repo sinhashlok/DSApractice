@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/merge-sorted-array/
 
-package DSApractice.LeetCode.Sorting.Easy;
+package DSApractice.Sorting.Easy;
 
 public class Merge_Sorted_Array_88 {
 
