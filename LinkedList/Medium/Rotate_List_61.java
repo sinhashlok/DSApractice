@@ -31,6 +31,10 @@ public class Rotate_List_61 {
 
     // My approach
     public ListNode rotateRightMy(ListNode head, int k) {
+        if (head == null) {
+            return head;
+        }
+
         int size = findSize(head);
         k %= size;
 
@@ -58,6 +62,7 @@ public class Rotate_List_61 {
 
         return head;
     }
+
     public int findSize(ListNode head) {
         ListNode node = head;
         int size = 0;
