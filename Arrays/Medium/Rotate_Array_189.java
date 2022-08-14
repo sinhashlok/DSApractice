@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/rotate-array/
 
-package DSApractice.LeetCode.Arrays.Medium;
+package DSApractice.Arrays.Medium;
 
 public class Rotate_Array_189 {
 
@@ -13,7 +13,7 @@ public class Rotate_Array_189 {
 
     }
 
-    static void reverse(int[] nums, int l, int h) {
+    public void reverse(int[] nums, int l, int h) {
         while (l < h) {
             int temp = nums[l];
             nums[l] = nums[h];
