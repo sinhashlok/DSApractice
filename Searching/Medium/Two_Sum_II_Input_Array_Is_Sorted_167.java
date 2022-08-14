@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
-package DSApractice.LeetCode.Searching.Medium;
+package DSApractice.Searching.Medium;
 
 public class Two_Sum_II_Input_Array_Is_Sorted_167 {
 
