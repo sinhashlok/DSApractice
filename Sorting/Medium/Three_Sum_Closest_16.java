@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/3sum-closest/
 
-package DSApractice.LeetCode.Sorting.Medium;
+package DSApractice.Sorting.Medium;
 
 import java.util.Arrays;
 
