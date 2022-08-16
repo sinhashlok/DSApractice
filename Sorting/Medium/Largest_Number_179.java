@@ -30,7 +30,7 @@ public class Largest_Number_179 {
             return "0";
         }
 
-        // Build largest number from sorted array.
+        // Build the largest number from sorted array.
         String largestNumberStr = new String();
         for (String numAsStr : asStrs) {
             largestNumberStr += numAsStr;
