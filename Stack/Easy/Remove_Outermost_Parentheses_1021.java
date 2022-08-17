@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/remove-outermost-parentheses/
 
-package DSApractice.StacknQueue.Easy;
+package DSApractice.Stack.Easy;
 
 public class Remove_Outermost_Parentheses_1021 {
 
@@ -12,6 +12,7 @@ public class Remove_Outermost_Parentheses_1021 {
         while (i < s.length()) {
             if (s.charAt(i) == '(') {
                 if (count == 0) {
+                    continue;
                 }
                 else {
                     str.append("(");
@@ -21,6 +22,7 @@ public class Remove_Outermost_Parentheses_1021 {
             }
             else {
                 if (count == 1) {
+                    continue;
                 }
                 else {
                     str.append(")");

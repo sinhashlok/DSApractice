@@ -1,4 +1,4 @@
-package DSApractice.StacknQueue.Easy;
+package DSApractice.Stack.Medium;
 
 import java.util.Stack;
 

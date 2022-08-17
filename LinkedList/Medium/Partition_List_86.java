@@ -12,7 +12,6 @@ public class Partition_List_86 {
         ListNode after = after_head;
 
         while (head != null) {
-
             // If the original list node is lesser than the given x,
             // assign it to the before list.
             if (head.val < x) {

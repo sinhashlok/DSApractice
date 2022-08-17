@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/next-greater-element-i/
 
-package DSApractice.StacknQueue.Easy;
+package DSApractice.Stack.Easy;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,10 +48,12 @@ public class Next_Greater_Element_I_496 {
         than 1, so we pop 1 2 3 whose next greater element should be 6
     */
 
-    public int[] nextGreaterElement(int[] findNums, int[] nums) {
+    static int[] nextGreaterElement(int[] findNums, int[] nums) {
         Map<Integer, Integer> map = new HashMap<>(); // map from x to next greater element of x
         Stack<Integer> stack = new Stack<>();
 
+        // this finds the next greater element for each element in nums
+        // and stores it in map
         for (int num : nums) {
             while (!stack.isEmpty() && stack.peek() < num) {
                 map.put(stack.pop(), num);

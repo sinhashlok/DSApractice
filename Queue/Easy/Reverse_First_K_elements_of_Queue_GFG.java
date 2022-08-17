@@ -1,6 +1,6 @@
 // https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1
 
-package DSApractice.StacknQueue.Easy;
+package DSApractice.Queue.Easy;
 
 import java.util.LinkedList;
 import java.util.Queue;

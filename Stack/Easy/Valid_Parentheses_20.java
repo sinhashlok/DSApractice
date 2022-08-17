@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/valid-parentheses/
 
-package DSApractice.StacknQueue.Easy;
+package DSApractice.Stack.Easy;
 
 import java.util.Stack;
 
