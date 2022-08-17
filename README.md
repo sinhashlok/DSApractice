@@ -1,5 +1,5 @@
 ## DSApractice
-Check out my <a href="https://leetcode.com/shlokjp/">LeetCode profile</a>.
+Check out my <a href="https://leetcode.com/shlokjp/">LeetCode profile</a>.<br><br>
 This repo consists questions of Leetcode (and some other sites like GFG and Hackrank).<br>
 I made this repo to track my consistency and growth.
 
