@@ -3,26 +3,8 @@ package DSApractice.LinkedList.Medium;
 import javax.management.MBeanRegistration;
 
 public class Insertion_Sort_List_147 {
-    public static void main(String[] args) {
-        ListNode four = new ListNode(0);
-        ListNode three = new ListNode(4, four);
-        ListNode two = new ListNode(3, three);
-        ListNode one = new ListNode(5, two);
-        ListNode head = new ListNode(-1, one);
 
-//        ListNode three = new ListNode(3);
-//        ListNode two = new ListNode(1, three);
-//        ListNode one = new ListNode(2, two);
-//        ListNode head = new ListNode(4, one);
-
-        head = insertionSortList(head);
-        while (head != null) {
-            System.out.print(head.val + " ");
-            head = head.next;
-        }
-    }
-
-    static ListNode insertionSortList(ListNode head) {
+    public ListNode insertionSortList(ListNode head) {
         // pre-head, if a node is smaller than head
         ListNode sentinel = new ListNode(Integer.MIN_VALUE, head);
         ListNode node = head, after = head.next;
