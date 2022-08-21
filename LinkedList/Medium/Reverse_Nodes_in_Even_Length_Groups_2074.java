@@ -1,21 +1,8 @@
 package DSApractice.LinkedList.Medium;
 
 public class Reverse_Nodes_in_Even_Length_Groups_2074 {
-    public static void main(String[] args) {
-//        ListNode four = new ListNode(5);
-        ListNode three = new ListNode(6);
-        ListNode two = new ListNode(0, three);
-        ListNode one = new ListNode(1, two);
-        ListNode head = new ListNode(1, one);
 
-        head = reverseEvenLengthGroups(head);
-        while (head != null) {
-            System.out.print(head.val + " ");
-            head = head.next;
-        }
-    }
-
-    static ListNode reverseEvenLengthGroups(ListNode head) {
+        public ListNode reverseEvenLengthGroups(ListNode head) {
         int index = 1;
 
         ListNode node = head;
