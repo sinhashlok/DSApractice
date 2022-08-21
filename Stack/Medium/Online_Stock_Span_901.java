@@ -35,8 +35,8 @@ public class Online_Stock_Span_901 {
     List<Integer> arrmy = new ArrayList<>();
     Stack<Integer> s1my;
     int i = 0;
-    public StockSpannerMy() {
-        s1 = new Stack<>();
+    public void StockSpannerMy() {
+        s1my = new Stack<>();
     }
 
     public int nextMy(int price) {
