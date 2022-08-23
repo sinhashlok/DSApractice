@@ -1,7 +1,5 @@
 package DSApractice.Stack.Medium;
 
-import GFG.Stack.Stock_span_problem;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
