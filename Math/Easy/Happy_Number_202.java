@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/happy-number/
 
-package DSApractice.LeetCode.Math.Easy;
+package DSApractice.Math.Easy;
 
 public class Happy_Number_202 {
 

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/excel-sheet-column-title/
 
-package DSApractice.LeetCode.Math.Easy;
+package DSApractice.Math.Easy;
 
 public class Excel_Sheet_Column_Title_168 {
 
