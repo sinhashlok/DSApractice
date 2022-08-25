@@ -3,18 +3,7 @@ package DSApractice.Sorting.Easy;
 import java.util.Arrays;
 
 public class Maximum_Units_on_a_Truck_1710 {
-    public static void main(String[] args) {
-        int[][] arr = {
-                {5,10},
-                {2,5},
-                {4,7},
-                {3,9}
-        };
-
-        System.out.println(maximumUnits(arr, 4));
-    }
-
-    static int maximumUnits(int[][] boxTypes, int truckSize) {
+    public int maximumUnits(int[][] boxTypes, int truckSize) {
         // sort reverse
 
         // reverse quick sort - faster
@@ -36,7 +25,7 @@ public class Maximum_Units_on_a_Truck_1710 {
         return boxes;
     }
 
-    static void qSort(int[][] arr, int l, int r) {
+    private void qSort(int[][] arr, int l, int r) {
         if (l < r) {
             int p = partition(arr, l, r);
 
@@ -45,7 +34,7 @@ public class Maximum_Units_on_a_Truck_1710 {
         }
     }
 
-    static int partition(int[][] arr, int l, int r) {
+    private int partition(int[][] arr, int l, int r) {
         int p = arr[l][1];
         int i = l - 1, j = r + 1;
 
@@ -65,7 +54,7 @@ public class Maximum_Units_on_a_Truck_1710 {
         }
     }
 
-    static void swap(int[][] arr, int i, int j) {
+    private void swap(int[][] arr, int i, int j) {
         int temp1 = arr[i][0];
         int temp2 = arr[i][1];
 
