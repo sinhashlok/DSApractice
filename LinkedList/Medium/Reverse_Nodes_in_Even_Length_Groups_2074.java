@@ -25,6 +25,7 @@ public class Reverse_Nodes_in_Even_Length_Groups_2074 {
                 ListNode temp = null;
                 i--;
 
+                // reverse the list
                 while (tail != null && i != 0) {
                     if (tail.next != null) {
                         temp = tail.next;
