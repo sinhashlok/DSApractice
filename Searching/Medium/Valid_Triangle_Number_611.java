@@ -55,7 +55,7 @@ public class Valid_Triangle_Number_611 {
                 count += k - j - 1;
             }
         }
-
+        
         return count;
     }
 }
