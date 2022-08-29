@@ -6,6 +6,30 @@ import java.util.List;
 
 public class Find_K_Closest_Elements_658 {
 
+    // LeetCode
+    public List<Integer> findClosestElementsLeet(int[] arr, int k, int x) {
+        int l = 0;
+        int h = arr.length - 1;
+
+        // we use two pointers to rule out more than k elements
+        // and only keep k the closest elements
+        while (h - l >= k) {
+            if (Math.abs(arr[l] - x) > Math.abs(arr[h] - x)) {
+                l++;
+            } else {
+                h--;
+            }
+        }
+
+        List<Integer> result = new ArrayList<>();
+        for (int i = l; i <= h; i++) {
+            result.add(arr[i]);
+        }
+        return result;
+    }
+
+
+    // My approach
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
         int pos = binSearch(arr, x);
 
@@ -54,7 +78,6 @@ public class Find_K_Closest_Elements_658 {
         Collections.sort(list);
         return list;
     }
-
     private int binSearch(int[] arr, int x) {
         int l = 0, r = arr.length - 1, m = 0;
         while (l < r) {
