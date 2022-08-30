@@ -6,18 +6,17 @@ import java.util.List;
 public class Find_the_Minimum_and_Maximum_Number_of_Nodes_Between_Critical_Points_2058 {
 
     public int[] nodesBetweenCriticalPoints(ListNode head) {
-        if (head.next.next == null && head.next.next.next == null) {
+        if (head.next.next == null) {
             return new int[] {-1, -1};
         }
 
         ListNode prev = head;
         ListNode curr = head.next;
-        ListNode after = curr.next;
         int index = 1;
         int first = -1, last = -1, res = Integer.MAX_VALUE;
 
-        while (after != null) {
-            if ((curr.val > prev.val && curr.val > after.val) || (curr.val < prev.val && curr.val < after.val)) {
+        while (curr.next != null) {
+            if ((curr.val > prev.val && curr.val > curr.next.val) || (curr.val < prev.val && curr.val < curr.next.val)) {
                 if (first == -1) {
                     first = index;
                 } else {
@@ -28,8 +27,7 @@ public class Find_the_Minimum_and_Maximum_Number_of_Nodes_Between_Critical_Point
             }
 
             prev = curr;
-            curr = after;
-            after = after.next;
+            curr = curr.next;
             index++;
         }
 
