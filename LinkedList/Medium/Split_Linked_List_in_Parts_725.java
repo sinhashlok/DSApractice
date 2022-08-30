@@ -1,23 +1,6 @@
 package DSApractice.LinkedList.Medium;
 
 public class Split_Linked_List_in_Parts_725 {
-    public static void main(String[] args) {
-        ListNode nine = new ListNode(10);
-        ListNode eight = new ListNode(9, nine);
-        ListNode seven = new ListNode(8, eight);
-        ListNode six = new ListNode(7, seven);
-        ListNode five = new ListNode(6, six);
-        ListNode four = new ListNode(5, five);
-        ListNode three = new ListNode(4, four);
-        ListNode two = new ListNode(3, three);
-        ListNode one = new ListNode(2, two);
-        ListNode head = new ListNode(1, one);
-
-        ListNode[] arr = splitListToParts(head, 3);
-        for (int i = 0; i < 5; i++) {
-            System.out.println(arr[i]);
-        }
-    }
 
     public ListNode[] splitListToParts(ListNode head, int k) {
         int size = getSize(head);
