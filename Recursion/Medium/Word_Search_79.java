@@ -1,29 +1,30 @@
 package DSApractice.Recursion.Medium;
 
 public class Word_Search_79 {
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
+////        char[][] board = {
+////                {'A', 'B', 'C', 'E'},
+////                {'S', 'F', 'C', 'S'},
+////                {'A', 'D', 'E', 'E'}
+////        };
+//
 //        char[][] board = {
-//                {'A', 'B', 'C', 'E'},
-//                {'S', 'F', 'C', 'S'},
-//                {'A', 'D', 'E', 'E'}
+//                {'a','b'},
+//                {'c', 'd'}
 //        };
+//
+//        System.out.println(exist(board, "dbac"));
+//    }
 
-        char[][] board = {
-                {'a','b'},
-                {'c', 'd'}
-        };
-
-        System.out.println(exist(board, "dbac"));
-    }
-
-    static boolean exist(char[][] board, String word) {
+    public boolean exist(char[][] board, String word) {
+        // flag matrix to keep track of previously visited elements
         boolean[][] flag = new boolean[board.length][board[0].length];
 
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
+        for (int i = 0; i < board.length; i++) { // row
+            for (int j = 0; j < board[i].length; j++) { // column
 
                 if (word.charAt(0) == board[i][j]) {
-                    flag[i][j] = true;
+                    flag[i][j] = true;  // true - previously visited
                     if (find(board, word, flag, 1, i, j)) {
                         return true;
                     }
@@ -36,7 +37,8 @@ public class Word_Search_79 {
         return false;
     }
 
-    static boolean find(char[][] board, String word, boolean[][] flag, int index, int i, int j) {
+    private boolean find(char[][] board, String word, boolean[][] flag, int index, int i, int j) {
+        // index - to keep track of length of string
         if (index == word.length()) {
             return true;
         }

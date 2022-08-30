@@ -8,6 +8,7 @@ public class Combination_Sum_39 {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();
         solution(0, candidates, target, list, new ArrayList<>());
+
         return list;
     }
 
@@ -20,11 +21,13 @@ public class Combination_Sum_39 {
             return;
         }
 
-        if(arr[index] <= target) {
+        if(arr[index] <= target) {  // first use the same element again and again
             temp.add(arr[index]);
             solution(index, arr, target - arr[index], list, temp);
+            // backtrack
             temp.remove(temp.size() - 1);
         }
+
         solution(index + 1, arr, target, list, temp);
     }
 }

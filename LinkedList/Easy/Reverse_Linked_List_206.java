@@ -3,24 +3,9 @@
 package DSApractice.LinkedList.Easy;
 
 public class Reverse_Linked_List_206 {
-    public static void main(String[] args) {
-        ListNode four = new ListNode(5);
-        ListNode three = new ListNode(4, four);
-        ListNode two = new ListNode(3, three);
-        ListNode one = new ListNode(2, two);
-        ListNode head = new ListNode(1, one);
-
-        head = reverseListIter(head);
-
-        while (head != null) {
-            System.out.print(head.val + " -> ");
-            head = head.next;
-        }
-        System.out.println("END");
-    }
 
     // Iterative approach
-    static ListNode reverseListIter(ListNode head) {
+    public ListNode reverseListIter(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
@@ -44,7 +29,7 @@ public class Reverse_Linked_List_206 {
 
 
     // Recusrive approach
-    static ListNode reverseListRev(ListNode head) {
+    public ListNode reverseListRev(ListNode head) {
         int size = 0;
         ListNode node = head;
         while (node != null) {
@@ -72,7 +57,7 @@ public class Reverse_Linked_List_206 {
 
         return head;
     }
-    static ListNode reverseRec(ListNode curr, ListNode prev, ListNode newHead, ListNode head) {
+    private ListNode reverseRec(ListNode curr, ListNode prev, ListNode newHead, ListNode head) {
         if (curr.next == null) {
             curr.next = prev;
             newHead = curr;
