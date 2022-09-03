@@ -64,10 +64,10 @@ public class Minimum_Number_of_Days_to_Make_m_Bouquets_1482 {
             int mid = start + (end - start) / 2;
             int flower = 0, bouq = 0;
 
-            for (int i = 0; i < bloomDay.length; i++) {
+            for (int j : bloomDay) {
                 // if the adjacent flower has not bloomed is broken
                 // start with 0 flowers, as now they are not adjacent
-                if (bloomDay[i] > mid) {
+                if (j > mid) {
                     flower = 0;
                 } else if (++flower == k) {
                     // once flower has reach k
