@@ -11,7 +11,6 @@ public class Minimum_Depth_of_Binary_Tree_111 {
         getHeight(root, 1);
         return minH;
     }
-
     private void getHeight(TreeNode root, int h) {
         if (minH <= h) {
             return;
