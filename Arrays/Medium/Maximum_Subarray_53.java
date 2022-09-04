@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/maximum-subarray/
 
-package DSApractice.LeetCode.Arrays.Medium;
+package DSApractice.Arrays.Medium;
 
 public class Maximum_Subarray_53 {
 
