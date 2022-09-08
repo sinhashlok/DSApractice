@@ -13,23 +13,22 @@ public class Binary_Tree_Paths_257 {
     }
 
     private void inorder(TreeNode root, List<String> list, StringBuilder str) {
-        if (root == null) {
+        if(root == null) {
             return;
         }
+
+        int n = str.length();
+        str.append(root.val);
 
         if (root.left == null && root.right == null) {
-            StringBuilder s = new StringBuilder(str);
-            str.append(root.val);
-
             list.add(str.toString());
-            str.setLength(str.length() - String.valueOf(root.val).length());
-            return;
+        } else {
+            str.append("->");
+
+            inorder(root.left, list, str);
+            inorder(root.right, list, str);
         }
 
-        str.append(root.val).append("->");
-        inorder(root.left, list, str);
-        inorder(root.right, list, str);
-        int n = String.valueOf(root.val).length() + 2;
-        str.setLength(str.length() - n);
+        str.setLength(n);
     }
 }
