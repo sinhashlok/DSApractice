@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/product-of-array-except-self/
 
-package DSApractice.LeetCode.Arrays.Medium;
+package DSApractice.Arrays.Medium;
 
 public class Product_of_Array_Except_Self_238 {
 
