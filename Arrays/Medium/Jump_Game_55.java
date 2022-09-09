@@ -1,22 +1,22 @@
 package DSApractice.Arrays.Medium;
 
 public class Jump_Game_55 {
-    public static void main(String[] args) {
-        int[] arr = {3,2,1,0,4};
-        System.out.println(canJump(arr));
-    }
+//    public static void main(String[] args) {
+//        int[] arr = {3,2,1,0,4};
+//        System.out.println(canJump(arr));
+//    }
 
-    static int[] flag;
+    int[] flag;
     // 0 - traversing first time
     // -1 - false, cannot reach end case
     // 1 - true, will reach end case
-    static boolean canJump(int[] nums) {
+    public boolean canJump(int[] nums) {
         flag = new int[nums.length];
 
         return helper(nums, 0);
     }
 
-    static boolean helper(int[] nums, int index) {
+    private boolean helper(int[] nums, int index) {
         if (index == nums.length - 1) {
             return true;
         } else if (index >= nums.length) {

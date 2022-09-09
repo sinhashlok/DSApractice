@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/set-matrix-zeroes/
 
-package DSApractice.LeetCode.Arrays.Medium;
+package DSApractice.Arrays.Medium;
 
 public class Set_Matrix_Zeroes_73 {
     public void setZeroes(int[][] matrix) {
