@@ -10,6 +10,7 @@ public class Find_Minimum_in_Rotated_Sorted_Array_II_154 {
         while (l < r) {
             m = l + (r - l) / 2;
 
+            // if elements are same (repeating) -> skip them
             while (nums[l] == nums[r] && l != r - 1) {
                 if (l == r) {
                     return nums[l];
