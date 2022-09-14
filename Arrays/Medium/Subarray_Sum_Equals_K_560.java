@@ -35,7 +35,7 @@ public class Subarray_Sum_Equals_K_560 {
         int count = 0;
         sum = 0;
         for (int num : nums) {
-            if (map.containsKey(k) && map.get(k) != -1) {
+            if (map.containsKey(k)) {
                 count += map.get(k);
             }
             sum += num;
