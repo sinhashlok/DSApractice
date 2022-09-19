@@ -20,9 +20,8 @@ public class Design_Circular_Queue_622 {
         }
     }
 
-    public boolean deQueue(int value) {
+    public boolean deQueue() {
         if (!isEmpty()) {
-
             l = (l + 1) % arr.length;
             len--;
             return true;
