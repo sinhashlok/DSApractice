@@ -7,6 +7,8 @@ public class Decode_String_394 {
     public String decodeString(String s) {
         // Counts - store the just previous number - number of times the element is to be printed
         Stack<Integer> counts = new Stack<>();
+
+        // result - stores the final string
         Stack<String> result = new Stack<>();
 
         String res = "";
@@ -28,19 +30,25 @@ public class Decode_String_394 {
             } else if (s.charAt(index) == '[') {    // check for opening bracket
                 result.push(res);
                 res = "";
-                // here we push the latest string (just before the
+                // here we push the latest string (
+                // and update the string to empty
 
                 index += 1;
-            } else if (s.charAt(index) == ']') {
+            } else if (s.charAt(index) == ']') {    // closed bracket
+                // temp - stores the total string
                 StringBuilder temp = new StringBuilder(result.pop());
+                // count - store the number of times the latest string it to repeat
                 int count = counts.pop();
+
+                // adds current s
                 for (int i = 0; i < count; i++) {
                     temp.append(res);
                 }
 
+                // res - now stores the total string
                 res = temp.toString();
                 index += 1;
-            } else {
+            } else {    // add character to string
                 res += s.charAt(index);
                 index += 1;
             }
