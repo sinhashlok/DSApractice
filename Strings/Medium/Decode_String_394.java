@@ -13,17 +13,23 @@ public class Decode_String_394 {
         int index = 0;
 
         while (index < s.length()) {
-            if (Character.isDigit(s.charAt(index))) {
+            if (Character.isDigit(s.charAt(index))) {   // check is character is digit
                 int count = 0;
+
+                // below loop keeps adding number to count (with appropriate decimal places)
+                // while the numbers keeps occurring simultaneously
                 while (Character.isDigit(s.charAt(index))) {
                     count = (10 * count) + (s.charAt(index) - '0');
                     index += 1;
                 }
 
+                // push the latest number to counts (stack)
                 counts.push(count);
-            } else if (s.charAt(index) == '[') {
+            } else if (s.charAt(index) == '[') {    // check for opening bracket
                 result.push(res);
                 res = "";
+                // here we push the latest string (just before the
+
                 index += 1;
             } else if (s.charAt(index) == ']') {
                 StringBuilder temp = new StringBuilder(result.pop());
