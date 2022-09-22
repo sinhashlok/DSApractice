@@ -37,10 +37,10 @@ public class Decode_String_394 {
             } else if (s.charAt(index) == ']') {    // closed bracket
                 // temp - stores the total string
                 StringBuilder temp = new StringBuilder(result.pop());
-                // count - store the number of times the latest string it to repeat
+                // count - store the number of times the latest string (res) is it to repeat
                 int count = counts.pop();
 
-                // adds current s
+                // adds res, counts time to temp (total string)
                 for (int i = 0; i < count; i++) {
                     temp.append(res);
                 }
