@@ -2,20 +2,8 @@ package DSApractice.Searching.Medium;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
 public class Time_Based_Key_Value_Store_981 {
-//    public static void main(String[] args) {
-//        TimeMap();
-//        set("love","high",10);
-//        set("love","low",20);
-//        System.out.println(get("love",5));
-//        System.out.println(get("love",10));
-//        System.out.println(get("love",15));
-//        System.out.println(get("love",20));
-//        System.out.println(get("love",25));
-//    }
-
 
         // My Approach - V.Very Slow
     ArrayList<Integer> time;
