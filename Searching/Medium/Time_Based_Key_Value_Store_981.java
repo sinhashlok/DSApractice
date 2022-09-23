@@ -1,39 +1,65 @@
 package DSApractice.Searching.Medium;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 public class Time_Based_Key_Value_Store_981 {
+//    public static void main(String[] args) {
+//        TimeMap();
+//        set("love","high",10);
+//        set("love","low",20);
+//        System.out.println(get("love",5));
+//        System.out.println(get("love",10));
+//        System.out.println(get("love",15));
+//        System.out.println(get("love",20));
+//        System.out.println(get("love",25));
+//    }
 
-    HashMap<String, HashMap<Integer, String>> keyTimeMap;
+
+        // My Approach - V.Very Slow
+    ArrayList<Integer> time;
+    // time - stores the time at which each input was taken, and we track it to the key and value pair
+    // using the index of the ArrayList
+
+    HashMap<Integer, HashMap<String, String>> map;
+    // [index(of timestamp in time), HashMap{key, value}]
+
     public void TimeMap() {
-        keyTimeMap = new HashMap<String, HashMap<Integer, String>>();
+        time = new ArrayList<>();
+        map = new HashMap<Integer, HashMap<String, String>>();
     }
 
     public void set(String key, String value, int timestamp) {
-        // If the 'key' does not exist in map.
-        if (!keyTimeMap.containsKey(key)) {
-            keyTimeMap.put(key, new HashMap<Integer, String>());
-        }
+        time.add(timestamp);
 
-        // Store '(timestamp, value)' pair in 'key' bucket.
-        keyTimeMap.get(key).put(timestamp, value);
+        HashMap<String, String> input = new HashMap<>();
+        input.put(key, value);
+
+        map.put(time.size() - 1, new HashMap<>(input));
     }
 
     public String get(String key, int timestamp) {
-        // If the 'key' does not exist in map we will return empty string.
-        if (!keyTimeMap.containsKey(key)) {
-            return "";
-        }
+        // Binary Search - gives the rightmost occurrence timestamp
+        int l = 0, r = time.size() - 1, m = 0;
+        while (l < r) {
+            m = l + (r - l) / 2;
 
-        // Iterate on time from 'timestamp' to '1'.
-        for (int currTime = timestamp; currTime >= 1; --currTime) {
-            // If a value for current time is stored in key's bucket we return the value.
-            if (keyTimeMap.get(key).containsKey(currTime)) {
-                return keyTimeMap.get(key).get(currTime);
+            if (time.get(m) > timestamp) {
+                r = m;
+            } else {
+                l = m + 1;
             }
         }
 
-        // Otherwise no time <= timestamp was stored in key's bucket.
+        while (l != -1) {
+            if ((time.get(l) <= timestamp) && (map.get(l).containsKey(key))) {
+                return (String) map.get(l).get(key);
+            }
+
+            l--;
+        }
+
         return "";
     }
 }
