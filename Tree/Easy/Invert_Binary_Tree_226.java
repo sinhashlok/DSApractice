@@ -2,7 +2,10 @@ package DSApractice.Tree.Easy;
 
 public class Invert_Binary_Tree_226 {
 
-    // naive - create a new tree
+    /*
+    * we swap the left child and right child of each parent node recursively
+    * by doing this we swap each node
+    * */
     public TreeNode invertTree(TreeNode root) {
         inorder(root);
         return root;
