@@ -44,7 +44,8 @@ public class Integer_to_Roman_12 {
         }
 
         return str.toString();
-        }
+    }
+
     public void helper(int num, int n, StringBuilder str, char f, char s, char t) {
         int x = (int)(num / Math.pow(10, n - 1));
         if (x == 9) {
