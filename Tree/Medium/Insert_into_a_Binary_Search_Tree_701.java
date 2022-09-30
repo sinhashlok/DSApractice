@@ -5,24 +5,27 @@ import GFG.BST.Node;
 public class Insert_into_a_Binary_Search_Tree_701 {
 
     public TreeNode insertIntoBST(TreeNode root, int val) {
-        TreeNode parent = null, temp = root;
-        while (temp !=  null) {
-            parent = temp;
-            if (temp.val < val) {
-                temp = temp.right;
-            } else if (temp.val > val) {
-                temp = temp.left;
-            }
-        }
-
-        if (parent == null) {
+        if (root == null) {
             return new TreeNode(val);
         }
 
-        if (parent.val < val) {
-            parent.right = new TreeNode(val);
-        } else {
-            parent.left = new TreeNode(val);
+        TreeNode curr = root;
+        while (true) {
+            if (curr.val < val){
+                if (curr.right != null) {
+                    curr = curr.right;
+                } else {
+                    curr.right = new TreeNode(val);
+                    break;
+                }
+            } else {
+                if (curr.left != null) {
+                    curr = curr.left;
+                } else {
+                    curr.left = new TreeNode(val);
+                    break;
+                }
+            }
         }
 
         return root;
