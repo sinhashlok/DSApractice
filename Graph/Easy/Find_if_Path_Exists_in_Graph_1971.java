@@ -8,6 +8,10 @@ public class Find_if_Path_Exists_in_Graph_1971 {
 
     private boolean flag = false;
     public boolean validPath(int n, int[][] edges, int source, int destination) {
+        if (source == destination) {
+            return true;
+        }
+
         // constructing a graph
         ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
         for (int i = 0; i < n; i++) {
@@ -29,18 +33,14 @@ public class Find_if_Path_Exists_in_Graph_1971 {
     }
 
     private void DFS(ArrayList<ArrayList<Integer>> adj, int s, int d, boolean[] visited) {
-        visited[s] = true;
-
-        for (int u : adj.get(s)) {
-            if (u == d) {
+        if(!visited[s] && !flag){
+            if(s == d){
                 flag = true;
-            }
-
-            if (flag) {
                 return;
             }
 
-            if (!visited[u]) {
+            visited[s] = true;
+            for(int u : adj.get(s)){
                 DFS(adj, u, d, visited);
             }
         }
