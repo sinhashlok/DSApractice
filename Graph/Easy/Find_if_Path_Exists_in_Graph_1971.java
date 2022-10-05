@@ -1,8 +1,6 @@
 package DSApractice.Graph.Easy;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class Find_if_Path_Exists_in_Graph_1971 {
 
