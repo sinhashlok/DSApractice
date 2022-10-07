@@ -1,20 +1,6 @@
 package DSApractice.Recursion.Medium;
 
 public class Word_Search_79 {
-//    public static void main(String[] args) {
-////        char[][] board = {
-////                {'A', 'B', 'C', 'E'},
-////                {'S', 'F', 'C', 'S'},
-////                {'A', 'D', 'E', 'E'}
-////        };
-//
-//        char[][] board = {
-//                {'a','b'},
-//                {'c', 'd'}
-//        };
-//
-//        System.out.println(exist(board, "dbac"));
-//    }
 
     public boolean exist(char[][] board, String word) {
         // flag matrix to keep track of previously visited elements
