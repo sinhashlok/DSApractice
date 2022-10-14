@@ -12,6 +12,7 @@ public class Delete_the_Middle_Node_of_a_Linked_List_2095 {
             slow = slow.next;
             fast = fast.next.next;
         }
+        // slow = slow.next;
 
         slow.val = slow.next.val;
         slow.next = slow.next.next;
