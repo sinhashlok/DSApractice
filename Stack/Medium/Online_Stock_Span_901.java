@@ -30,28 +30,28 @@ public class Online_Stock_Span_901 {
 
 
     // My approach
-    List<Integer> arrmy = new ArrayList<>();
-    Stack<Integer> s1my;
+    List<Integer> arrMy = new ArrayList<>();
+    Stack<Integer> s1My;
     int i = 0;
     public void StockSpannerMy() {
-        s1my = new Stack<>();
+        s1My = new Stack<>();
     }
 
     public int nextMy(int price) {
-        arrmy.add(price);
-        if (s1my.isEmpty()) {
-            s1my.push(i);
+        arrMy.add(price);
+        if (s1My.isEmpty()) {
+            s1My.push(i);
             i++;
             return 1;
         }
 
-        while(!s1my.isEmpty() && arrmy.get(s1my.peek()) <= price) {
-            s1my.pop();
+        while(!s1My.isEmpty() && arrMy.get(s1My.peek()) <= price) {
+            s1My.pop();
         }
 
-        int span = s1my.isEmpty() ? i + 1 : i - s1my.peek();
+        int span = s1My.isEmpty() ? i + 1 : i - s1My.peek();
 
-        s1my.push(i);
+        s1My.push(i);
         i++;
         return span;
     }
