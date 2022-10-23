@@ -23,7 +23,8 @@ public class Redundant_Connection_684 {
             graph[edge[0]].add(edge[1]);
             graph[edge[1]].add(edge[0]);
         }
-        throw new AssertionError();
+
+        return new int[] {-1, -1};
     }
 
     private boolean dfs(ArrayList<Integer>[] graph, int source, int target) {
