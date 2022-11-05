@@ -3,7 +3,7 @@ package DSApractice.Recursion.Medium;
 public class Word_Search_79 {
 
     public boolean exist(char[][] board, String word) {
-        // flag matrix to keep track of previously visited elements
+        // keeps track of previously visited elements
         boolean[][] flag = new boolean[board.length][board[0].length];
 
         for (int i = 0; i < board.length; i++) { // row
