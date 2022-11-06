@@ -11,12 +11,11 @@ public class Longest_Palindrome_409 {
         }
 
         Map<Character, Integer> map = new HashMap<>();
-
+        int evenCount = 0;
         for(char ch : s.toCharArray()) {
             map.put(ch, map.getOrDefault(ch,0)+1);
         }
 
-        int evenCount = 0;
         for(int count : map.values()){
             evenCount += (count % 2 == 0) ? count : count-1;
         }
