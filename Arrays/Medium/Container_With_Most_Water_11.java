@@ -3,24 +3,24 @@ package DSApractice.Arrays.Medium;
 public class Container_With_Most_Water_11 {
 
     public int maxArea(int[] height) {
-        int left = 0;
-        int right = height.length - 1;
+        int l = 0;
+        int r = height.length - 1;
         int max = 0;
 
-        while(left < right) {
-            int w = right - left;
-            int h = Math.min(height[left], height[right]);
+        while(l < r) {
+            int w = r - l;
+            int h = Math.min(height[l], height[r]);
             int area = h * w;
 
             max = Math.max(max, area);
 
-            if(height[left] < height[right]) {
-                left++;
-            } else if(height[left] > height[right]) {
-                right--;
+            if (height[l] < height[r]) {
+                l++;
+            } else if (height[l] > height[r]) {
+                r--;
             } else {
-                left++;
-                right--;
+                l++;
+                r--;
             }
         }
 
