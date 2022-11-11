@@ -27,10 +27,11 @@ public class Number_of_Islands_200 {
 
     private void DFS(char[][] grid, int i, int j) {
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] != '1') {
+            // if out of bound
             return;
         }
 
-        grid[i][j] = '0';
+        grid[i][j] = '0';   // DFS - mark already visited as 0
         DFS(grid, i + 1, j);
         DFS(grid, i - 1, j);
         DFS(grid, i, j + 1);
