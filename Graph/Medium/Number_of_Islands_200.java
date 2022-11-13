@@ -27,7 +27,6 @@ public class Number_of_Islands_200 {
 
     private void DFS(char[][] grid, int i, int j) {
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] != '1') {
-            // if out of bound
             return;
         }
 
