@@ -1,10 +1,9 @@
 // https://leetcode.com/problems/reverse-words-in-a-string-iii/solution/
 
-package DSApractice.LeetCode.Strings.Easy;
+package DSApractice.Strings.Easy;
 
 public class Reverse_Words_in_a_String_III_557 {
 
-        // My Approach
         static String reverseWordsMY(String s) {
             String[] words = s.split(" ");
 

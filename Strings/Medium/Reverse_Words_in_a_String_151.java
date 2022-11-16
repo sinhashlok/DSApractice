@@ -11,7 +11,7 @@ public class Reverse_Words_in_a_String_151 {
             if (ch == ' ') {
                 str.reverse();
                 res.append(str);
-                
+
                 if (str.length() != 0 && res.charAt(res.length() - 1) != ' ') {
                     res.append(" ");
                 }
