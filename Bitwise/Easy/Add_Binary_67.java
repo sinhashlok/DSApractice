@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/add-binary/
 
-package DSApractice.LeetCode.Bitwise.Easy;
+package DSApractice.Bitwise.Easy;
 
 public class Add_Binary_67 {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package DSApractice.Tree.Medium;
 
-import MetaGlobalHackathon.Rollercoasters;
-
 public class Lowest_Common_Ancestor_of_a_Binary_Search_Tree_235 {
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

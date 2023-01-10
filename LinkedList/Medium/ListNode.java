@@ -1,6 +1,6 @@
 package DSApractice.LinkedList.Medium;
 
-public class ListNode {
+public class  ListNode {
     int val;
     ListNode next;
 

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/two-sum/
 
-package DSApractice.LeetCode.Arrays.Easy;
+package DSApractice.Arrays.Easy;
 
 import java.util.HashSet;
 

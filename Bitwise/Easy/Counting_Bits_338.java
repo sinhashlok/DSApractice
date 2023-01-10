@@ -22,7 +22,7 @@
     Then we don't want to repeat for 15, we simply return our answer from there.
     By doing that we can save so many recursive call.
 * * */
-package DSApractice.LeetCode.Bitwise.Easy;
+package DSApractice.Bitwise.Easy;
 
 public class Counting_Bits_338 {
     public static void main(String[] args) {
