@@ -22,7 +22,7 @@ public class Number_of_Islands_200 {
             }
         }
 
-        return cout;
+        return count;
     }
 
     private void DFS(char[][] grid, int i, int j) {
