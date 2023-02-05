@@ -1,4 +1,4 @@
-package DSApractice.LeetCode.Arrays.Easy;
+package DSApractice.Arrays.Easy;
 
 public class Determine_Whether_Matrix_Can_Be_Obtained_By_Rotation_1886 {
 
