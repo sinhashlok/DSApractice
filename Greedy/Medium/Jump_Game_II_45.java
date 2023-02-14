@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/jump-game-ii/description/
-package DSApractice.DP.Medium;
+package DSApractice.Greedy.Medium;
 
 import java.util.Arrays;
 
