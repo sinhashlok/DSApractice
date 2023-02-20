@@ -1,42 +1,38 @@
+// https://leetcode.com/problems/search-a-2d-matrix/description/
+
 package DSApractice.Searching.Medium;
 
 public class Search_a_2D_Matrix_74 {
-    public static void main(String[] args) {
-        int[][] arr = {
-                {1,3,5,7},
-                {10,11,16,20},
-                {23,30,34,60},
-                {65,78,86,101}
-        };
 
-        System.out.println(searchMatrix(arr, 34));
-    }
+    public boolean searchMatrix(int[][] matrix, int target) {
+        // binary search every row
+        int i = 0;
+        while (i < matrix.length) {
+            if (target <= matrix[i][matrix[0].length - 1] && binarySearchRow(matrix[i], target)) {
+                    return true;
+            }
 
-    static boolean searchMatrix(int[][] matrix, int target) {
-        if ((target < matrix[0][0]) || (target > matrix[matrix.length - 1][matrix[0].length - 1])) {
-            return false;
+            i++;
         }
 
-        int rows = matrix.length;
-        int cols = matrix[0].length;
+        return false;
+    }
 
-        int start = 0;
-        int end = (rows * cols) - 1;
+    private boolean binarySearchRow(int[] row, int target) {
+        int l = 0, r = row.length - 1;
+        int mid = 0;
 
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
+        while (l <= r) {
+            mid = ((r - l) / 2) + l;
 
-            // mid/col, works because, mid is indirectly for end, where end = row * col
-            // so when divide we do get back row as mid / col
-            // as for mid % col, straight forward
-            if (matrix[mid / cols][mid % cols] == target) {
+            if (row[mid] == target) {
                 return true;
             }
 
-            if (matrix[mid / cols][mid % cols] < target) {
-                start = mid + 1;
+            if (row[mid] > target) {
+                r--;
             } else {
-                end = mid - 1;
+                l++;
             }
         }
 
