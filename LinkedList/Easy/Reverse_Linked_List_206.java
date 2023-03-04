@@ -10,20 +10,21 @@ public class Reverse_Linked_List_206 {
             return head;
         }
 
-        ListNode prev = null;
-        ListNode next = head.next;
+        ListNode prev = head;
+        ListNode curr = head.next;
+        ListNode temp = curr;
+        head.next = null;
 
-        while (next != null) {
-            head.next = prev;
-            prev = head;
-            head = next;
-            if (next != null) {
-                next = next.next;
-            }
+        while (temp != null) {
+            temp = curr.next;
+
+            curr.next = prev;
+
+            prev = curr;
+            curr = temp;
         }
 
-        head.next = prev;
-
+        head = prev;
         return head;
     }
 
