@@ -3,42 +3,60 @@ package DSApractice.Stack.Easy;
 import java.util.Stack;
 
 public class Implement_Queue_using_Stacks_232 {
+    class MyQueue {
+        Stack<Integer> s1;
+        Stack<Integer> s2;
 
-    int front = 0;
-    private Stack<Integer> s1;
-    private Stack<Integer> s2;
-    public void MyQueue() {
-        s1 = new Stack<>();
-        s2 = new Stack<>();
-    }
-
-    public void push(int x) {
-        if (s1.empty()) {
-            front = x;
+        public MyQueue() {
+            s1 = new Stack<>();
+            s2 = new Stack<>();
         }
 
-        s1.push(x);
-    }
+        public void push(int x) {
+            s1.push(x);
+        }
 
-    public int pop() {
-        if (s2.isEmpty()) {
+        public int pop() {
             while (!s1.isEmpty()) {
                 s2.push(s1.pop());
             }
+
+            int x = s2.pop();
+            while (!s2.isEmpty()) {
+                s1.push(s2.pop());
+            }
+
+            return x;
         }
 
-        return s2.pop();
-    }
+        public int peek() {
+            while (!s1.isEmpty()) {
+                s2.push(s1.pop());
+            }
 
-    public int peek() {
-        if (!s2.isEmpty()) {
-            return s2.peek();
+            int x = s2.peek();
+            while (!s2.isEmpty()) {
+                s1.push(s2.pop());
+            }
+
+            return x;
         }
 
-        return front;
+        public boolean empty() {
+            if (s1.isEmpty()) {
+                return true;
+            }
+
+            return false;
+        }
     }
 
-    public boolean empty() {
-        return s1.isEmpty() && s2.isEmpty();
-    }
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
 }
