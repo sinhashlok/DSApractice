@@ -3,19 +3,21 @@
 package DSApractice.Arrays.Easy;
 
 public class Best_Time_to_Buy_and_Sell_Stock_121 {
-    public static void main(String[] args) {
-        int[] prices = {7,1,5,3,6,1};
-        System.out.println(maxProfit(prices));
-    }
 
-    static int maxProfit(int[] prices) {
-        int min = Integer.MAX_VALUE;
+    public int maxProfit(int[] prices) {
+        if (prices.length == 1) {
+            return 0;
+        }
+
         int profit = 0;
-        int temp = 0;
+        int l = 0, r = 1;
+        while (l <= r && r < prices.length) {
+            if (prices[l] >= prices[r]) {
+                l = r;
+            }
 
-        for (int i = 0; i < prices.length; i++) {
-            min = Math.min(min, prices[i]);
-            profit = Math.max(profit, prices[i] - min);
+            profit = Math.max(profit, prices[r] - prices[l]);
+            r++;
         }
 
         return profit;
