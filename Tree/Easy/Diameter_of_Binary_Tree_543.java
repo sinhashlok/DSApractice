@@ -2,10 +2,10 @@ package DSApractice.Tree.Easy;
 
 public class Diameter_of_Binary_Tree_543 {
 
-    int maxPath = 0;
+    private int maxDia;
     public int diameterOfBinaryTree(TreeNode root) {
         inorder(root);
-        return maxPath;
+        return maxDia;
     }
 
     private int inorder(TreeNode root) {
@@ -13,10 +13,10 @@ public class Diameter_of_Binary_Tree_543 {
             return 0;
         }
 
-        int left = inorder(root.left);
-        int right = inorder(root.right);
+        int l = inorder(root.left);
+        int r = inorder(root.right);
 
-        maxPath = Math.max(maxPath, left + right);
-        return Math.max(left, right) + 1;
+        maxDia = Math.max(maxDia, l + r);
+        return Math.max(l, r) + 1;
     }
 }
