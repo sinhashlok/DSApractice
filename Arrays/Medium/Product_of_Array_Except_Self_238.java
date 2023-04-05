@@ -2,23 +2,28 @@
 
 package DSApractice.Arrays.Medium;
 
+import java.util.Arrays;
+
 public class Product_of_Array_Except_Self_238 {
 
     public int[] productExceptSelf(int[] nums) {
-        int[] res = new int[nums.length];
+        int[] arr = new int[nums.length];
+        Arrays.fill(arr, 1);
+        int prefix = nums[0];
+        int postfix = nums[nums.length - 1];
 
-        res[0] = 1;
-        // Calc lefts and store in res
-        for (int i = 1; i < nums.length; i++)
-            res[i] = res[i-1] * nums[i-1];
-
-        // Calc right and product from end of the array
-        int right = 1;
-        for (int i = nums.length - 1; i >= 0; i--) {
-            res[i] *= right;
-            right *= nums[i];
+        // prefix
+        for (int i = 1; i < nums.length; i++) {
+            arr[i] *=  prefix;
+            prefix *= nums[i];
         }
-        return res;
 
+        // postfix
+        for (int i = nums.length - 2; i >= 0; i--) {
+            arr[i] *= postfix;
+            postfix *= nums[i];
+        }
+
+        return arr;
     }
 }
