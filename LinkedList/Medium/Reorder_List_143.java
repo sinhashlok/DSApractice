@@ -1,9 +1,49 @@
 package DSApractice.LinkedList.Medium;
 
+
 public class Reorder_List_143 {
 
+    // Recursive
+    private static ListNode pHead;
+    public static void reorderListRecu(ListNode head) {
+        if (head.next == null) {
+            return;
+        }
+        pHead = head;
+
+        ListNode s = head;
+        ListNode f = head;
+
+        while (f != null && f.next != null) {
+            s = s.next;
+            f = f.next.next;
+        }
+
+        recursive(s);
+        if (pHead.next == pHead) {
+            pHead.next = null;
+        }
+    }
+
+    private static void recursive(ListNode node) {
+        if (node == null) {
+            // will return, and we will have the access to last node in previous recursion call stack
+            return;
+        }
+
+        recursive(node.next);
+
+        if (node.next == pHead.next) {
+            node.next = null;
+            return;
+        }
+        node.next = pHead.next;
+        pHead.next = node;
+        pHead = node.next;
+    }
+
     public void reorderList(ListNode head) {
-        if (head == null || head.next == null) {
+        if (head.next == null) {
             return;
         }
 
