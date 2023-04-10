@@ -20,6 +20,43 @@ public class Triangle_120 {
         return triangle.get(0).get(0);
     }
 
+    // Tabulation
+    public int tabulation(List<List<Integer>> triangle) {
+        int n = triangle.size();
+        int[][] dp = new int[n][n];
+
+        for (int j = 0; j < n; j++) {
+            dp[n - 1][j] = triangle.get(n - 1).get(j);
+        }
+
+        for (int i = n - 2; i >= 0; i--) {
+            for (int j = i; j >= 0; j--) {
+                int d = dp[i + 1][j];
+                int dg = dp[i + 1][j + 1];
+
+                dp[i][j] = triangle.get(i).get(j) + Math.min(d, dg);
+            }
+        }
+
+        return dp[0][0];
+    }
+
+
+    // Recursive
+    public int Recusive(List<List<Integer>> triangle) {
+        int n = triangle.size();
+        return helperRec(triangle, n, 0, 0);
+    }
+    private int helperRec(List<List<Integer>> triangle, int n, int i, int j) {
+        if (i == n - 1) {
+            return triangle.get(n - 1).get(j);
+        }
+
+        int d = helperRec(triangle, n, i + 1, j);
+        int dg = helperRec(triangle, n, i + 1, j + 1);
+
+        return triangle.get(i).get(j) + Math.min(d, dg);
+    }
 
     public int minimumTotalMyApproach(List<List<Integer>> triangle) {
         for (int i = 1; i < triangle.size(); i++) {
