@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/concatenation-of-array/
-package DSApractice.LeetCode.Arrays.Easy;
+package DSApractice.Arrays.Easy;
 
 public class Concatenation_of_Array_1929 {
 

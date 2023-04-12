@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/
 
-package DSApractice.LeetCode.Arrays.Easy;
+package DSApractice.Arrays.Easy;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -6,38 +6,40 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Copy_List_with_Random_Pointer_138 {
-    public static void main(String[] args) {
-        Node four = new Node(1);
-        Node three = new Node(13);
-        Node two = new Node(11);
-        Node one = new Node(-13);
-        Node root = new Node(7);
+//    public static void main(String[] args) {
+//        Node four = new Node(1);
+//        Node three = new Node(13);
+//        Node two = new Node(11);
+//        Node one = new Node(-13);
+//        Node root = new Node(7);
+//
+//        root.next = one;
+//        one.next = two;
+//        two.next = three;
+//        three.next = four;
+//        four.next = null;
+//
+//        root.random = null;
+//        one.random = root;
+//        two.random = four;
+//        three.random = two;
+//        four.random = root;
+//
+//        root = copyRandomList(root);
+//        while (root != null) {
+//            System.out.print(root.val + " ");
+//            root = root.next;
+//        }
+//    }
 
-        root.next = one;
-        one.next = two;
-        two.next = three;
-        three.next = four;
-        four.next = null;
-
-        root.random = null;
-        one.random = root;
-        two.random = four;
-        three.random = two;
-        four.random = root;
-
-        root = copyRandomList(root);
-        while (root != null) {
-            System.out.print(root.val + " ");
-            root = root.next;
-        }
-    }
-
-    static Node copyRandomList(Node head) {
+    public Node copyRandomList(Node head) {
         if (head == null) {
             return null;
         }
 
         Map<Node, Node> map = new HashMap<>();
+        // first - original Node
+        // second - deep copy
 
         // loop 1. copy all the nodes
         Node node = head;
@@ -49,6 +51,8 @@ public class Copy_List_with_Random_Pointer_138 {
         // loop 2. assign next and random pointers
         node = head;
         while (node != null) {
+            // .get(node).next/random - copied node
+            // .get(node.next/random) - original node
             map.get(node).next = map.get(node.next);
             map.get(node).random = map.get(node.random);
             node = node.next;
