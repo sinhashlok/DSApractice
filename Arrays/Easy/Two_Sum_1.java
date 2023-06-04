@@ -2,9 +2,7 @@
 
 package DSApractice.Arrays.Easy;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class Two_Sum_1 {
